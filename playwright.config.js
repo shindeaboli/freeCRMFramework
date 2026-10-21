@@ -4,7 +4,7 @@ import env from './env/env.config.js';
 export default defineConfig({
   testDir: './tests',
 
-  workers: 1,
+  workers: 2,
   //retries: 1,
 
   
@@ -31,25 +31,25 @@ export default defineConfig({
     }
   },
 
-  // projects :
-  // [
-  //   {
-  //     name : 'chromium',
-  //     use :
-  //     {
-  //       browserName : 'chromium'
-  //     }
-  //   },
+  projects :
+  [
+    {
+      name : 'chromium',
+      use :
+      {
+        browserName : 'chromium'
+      }
+    },
     
-  //   {
-  //     name : 'firefox',
-  //     use:
-  //     {
-  //       browserName : 'firefox'
-  //     }
-  //   }
+    {
+      name : 'firefox',
+      use:
+      {
+        browserName : 'firefox'
+      }
+    }
 
 
-  // ]
+  ]
 
 });
