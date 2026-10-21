@@ -1,0 +1,1894 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ContactPage.spec.js >> create new contact
+- Location: tests\ContactPage.spec.js:14:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'Contacts' }) resolved to 2 elements:
+    1) <a href="/contacts" class="_navItem_3as89_91">…</a> aka getByRole('link', { name: 'Contacts', exact: true })
+    2) <a href="/contacts" class="_statCard_43s4h_41">…</a> aka getByRole('link', { name: '7,133 Contacts' })
+
+Call log:
+  - waiting for getByRole('link', { name: 'Contacts' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - navigation "Main navigation" [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "FreeCRM" [ref=e7]
+        - generic [ref=e8]: FreeCRM
+      - button "Collapse navigation" [ref=e9] [cursor=pointer]
+    - list [ref=e13]:
+      - listitem [ref=e14]:
+        - link "Home" [ref=e15] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e21]:
+        - link "Contacts" [ref=e22] [cursor=pointer]:
+          - /url: /contacts
+      - listitem [ref=e30]:
+        - link "Companies" [ref=e31] [cursor=pointer]:
+          - /url: /companies
+      - listitem [ref=e38]:
+        - link "Calendar" [ref=e39] [cursor=pointer]:
+          - /url: /calendar
+      - listitem [ref=e44]:
+        - link "Deals" [ref=e45] [cursor=pointer]:
+          - /url: /deals
+      - listitem [ref=e51]:
+        - link "Tasks" [ref=e52] [cursor=pointer]:
+          - /url: /tasks
+      - listitem [ref=e58]:
+        - link "Cases" [ref=e59] [cursor=pointer]:
+          - /url: /cases
+      - listitem [ref=e65]:
+        - link "Calls" [ref=e66] [cursor=pointer]:
+          - /url: /calls
+      - listitem [ref=e71]:
+        - link "Email" [ref=e72] [cursor=pointer]:
+          - /url: /email
+      - listitem [ref=e78]:
+        - link "Documents" [ref=e79] [cursor=pointer]:
+          - /url: /documents
+      - listitem [ref=e84]:
+        - link "Campaigns" [ref=e85] [cursor=pointer]:
+          - /url: /campaigns
+      - listitem [ref=e91]:
+        - link "Forms" [ref=e92] [cursor=pointer]:
+          - /url: /forms
+      - listitem [ref=e98]:
+        - link "Landing pages" [ref=e99] [cursor=pointer]:
+          - /url: /landing
+      - listitem [ref=e105]:
+        - link "Reports" [ref=e106] [cursor=pointer]:
+          - /url: /reports
+      - listitem [ref=e110]:
+        - link "Products" [ref=e111] [cursor=pointer]:
+          - /url: /products
+      - listitem [ref=e118]:
+        - link "Quotes" [ref=e119] [cursor=pointer]:
+          - /url: /quotes
+      - listitem [ref=e125]:
+        - link "Invoices" [ref=e126] [cursor=pointer]:
+          - /url: /invoices
+    - link "Settings" [ref=e133] [cursor=pointer]:
+      - /url: /settings
+  - generic [ref=e139]:
+    - banner [ref=e140]:
+      - generic "Soft Tech enterprises" [ref=e141]:
+        - strong [ref=e142]: Soft Tech enterprises
+      - generic [ref=e143]:
+        - 'button "Balance: $0.00" [ref=e144] [cursor=pointer]':
+          - generic [ref=e145]: "Balance:"
+          - generic [ref=e146]: $0.00
+        - link "Free account" [ref=e147] [cursor=pointer]:
+          - /url: /settings/billing/plan
+        - search [ref=e151]:
+          - searchbox "Search" [ref=e152]
+        - button "Pinned Records" [ref=e154] [cursor=pointer]
+        - button "Last accessed" [ref=e158] [cursor=pointer]
+        - button "Rubbish Bin" [ref=e163] [cursor=pointer]
+        - button "Contact support" [ref=e167] [cursor=pointer]
+        - button "User menu" [ref=e171] [cursor=pointer]:
+          - generic [ref=e172]: PP
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - heading "Good afternoon, Praful" [level=1] [ref=e176]
+        - paragraph [ref=e177]: Wednesday 21 October
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - link "7,133 Contacts" [ref=e180] [cursor=pointer]:
+            - /url: /contacts
+            - generic [ref=e189]: 7,133
+            - generic [ref=e190]: Contacts
+          - link "1,862 Companies" [ref=e191] [cursor=pointer]:
+            - /url: /companies
+            - generic [ref=e199]: 1,862
+            - generic [ref=e200]: Companies
+          - link "852 Deals" [ref=e201] [cursor=pointer]:
+            - /url: /deals
+            - generic [ref=e208]: "852"
+            - generic [ref=e209]: Deals
+          - link "141 Tasks" [ref=e210] [cursor=pointer]:
+            - /url: /tasks
+            - generic [ref=e217]: "141"
+            - generic [ref=e218]: Tasks
+          - link "15 Cases" [ref=e219] [cursor=pointer]:
+            - /url: /cases
+            - generic [ref=e226]: "15"
+            - generic [ref=e227]: Cases
+        - generic [ref=e228]:
+          - generic [ref=e229]:
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - button "Drag to reorder" [ref=e233]
+                - generic [ref=e241]: System messages
+                - button "Reload card" [ref=e242] [cursor=pointer]
+                - button "Remove card" [ref=e248] [cursor=pointer]
+              - generic [ref=e253]:
+                - generic [ref=e254]:
+                  - generic [ref=e255]:
+                    - generic [ref=e256]: Release Notes - October 19th
+                    - generic [ref=e258]:
+                      - link "20/10/2026, 04:30" [ref=e259] [cursor=pointer]:
+                        - /url: /calendar/day/2026-10-20
+                      - link "Week view" [ref=e260] [cursor=pointer]:
+                        - /url: /calendar/week/2026-10-20
+                      - link "Month view" [ref=e263] [cursor=pointer]:
+                        - /url: /calendar/month/2026-10-20
+                  - list [ref=e268]:
+                    - listitem [ref=e269]: To comply with UK regulations we now require some information when purchasing a UK phone number as a business or as an individual. We will guide you through the process.
+                - generic [ref=e270]:
+                  - generic [ref=e271]:
+                    - generic [ref=e272]: Release Notes - October 14th
+                    - generic [ref=e274]:
+                      - link "15/10/2026, 01:10" [ref=e275] [cursor=pointer]:
+                        - /url: /calendar/day/2026-10-15
+                      - link "Week view" [ref=e276] [cursor=pointer]:
+                        - /url: /calendar/week/2026-10-15
+                      - link "Month view" [ref=e279] [cursor=pointer]:
+                        - /url: /calendar/month/2026-10-15
+                  - generic [ref=e283]:
+                    - paragraph [ref=e284]:
+                      - text: We've pushed out two major new updates today, still in beta for now but don't let that stop you. Both available to
+                      - strong [ref=e285]: PRO
+                      - text: accounts only
+                    - list [ref=e286]:
+                      - listitem [ref=e287]:
+                        - emphasis [ref=e288]:
+                          - strong [ref=e289]: Landing pages
+                        - text: ": You can create public landing pages - like mini web sites, that can include forms to collect data, or other content. That all feeds back to the CRM. You can"
+                        - link "read about it here" [ref=e290] [cursor=pointer]:
+                          - /url: https://docs.freecrm.com/landing-pages
+                      - listitem [ref=e291]:
+                        - emphasis [ref=e292]:
+                          - strong [ref=e293]: Email Template Library
+                        - text: ": Send out better designed email content, with our email template library. You can use one of our predefined templates or use it to create your own."
+                        - link "More about that here" [ref=e294] [cursor=pointer]:
+                          - /url: https://docs.freecrm.com/email-template-library
+                        - text: .
+                - generic [ref=e295]:
+                  - generic [ref=e296]:
+                    - generic [ref=e297]: Release Notes - October 11th
+                    - generic [ref=e299]:
+                      - link "12/10/2026, 04:31" [ref=e300] [cursor=pointer]:
+                        - /url: /calendar/day/2026-10-12
+                      - link "Week view" [ref=e301] [cursor=pointer]:
+                        - /url: /calendar/week/2026-10-12
+                      - link "Month view" [ref=e304] [cursor=pointer]:
+                        - /url: /calendar/month/2026-10-12
+                  - list [ref=e309]:
+                    - listitem [ref=e310]:
+                      - emphasis [ref=e311]:
+                        - strong [ref=e312]: Quotes
+                      - text: "- you can now generate a quote and send it to your contacts. Quotes can be connected to deals, and when accepted, used to raise an invoice."
+                    - listitem [ref=e313]: When sending an invoice or a quote you can now select the contact, or enter an ad-hoc email address.
+                - generic [ref=e314]:
+                  - generic [ref=e315]:
+                    - generic [ref=e316]: Release Notes - October 8th
+                    - generic [ref=e318]:
+                      - link "08/10/2026, 21:46" [ref=e319] [cursor=pointer]:
+                        - /url: /calendar/day/2026-10-08
+                      - link "Week view" [ref=e320] [cursor=pointer]:
+                        - /url: /calendar/week/2026-10-08
+                      - link "Month view" [ref=e323] [cursor=pointer]:
+                        - /url: /calendar/month/2026-10-08
+                  - list [ref=e328]:
+                    - listitem [ref=e329]:
+                      - text: You can now bulk update records from any grid. Select any number of records, then select
+                      - emphasis [ref=e330]: Bulk Update
+                      - text: from the action drop down and press the button. Then select which field to update and the new value to set. This will update all selected records.
+                - generic [ref=e331]:
+                  - generic [ref=e332]:
+                    - generic [ref=e333]: Release Notes - October 1st
+                    - generic [ref=e335]:
+                      - link "02/10/2026, 02:49" [ref=e336] [cursor=pointer]:
+                        - /url: /calendar/day/2026-10-02
+                      - link "Week view" [ref=e337] [cursor=pointer]:
+                        - /url: /calendar/week/2026-10-02
+                      - link "Month view" [ref=e340] [cursor=pointer]:
+                        - /url: /calendar/month/2026-10-02
+                  - list [ref=e345]:
+                    - listitem [ref=e346]: In the old user interface you could name phone numbers as anything. In this new interface we changed it to a selection (Mobile, Home, etc.). Under Settings -> Preferences you will now find a new option to change it back to a text field if that works better for you.
+                - generic [ref=e347]:
+                  - generic [ref=e348]:
+                    - generic [ref=e349]: Release Notes - September 28th
+                    - generic [ref=e351]:
+                      - link "28/09/2026, 14:18" [ref=e352] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-28
+                      - link "Week view" [ref=e353] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-28
+                      - link "Month view" [ref=e356] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-28
+                  - list [ref=e361]:
+                    - listitem [ref=e362]: Quick search from the top bar will now search contact's company name as well. So a search for Acme will retrieve both the company Acme and its associated contacts.
+                    - listitem [ref=e363]: Exports from each section will now export the visible columns. You can select to export all columns from the little down-arrow next to the export button.
+                    - listitem [ref=e364]: You can now export your full dataset from the Settings page.
+                - generic [ref=e365]:
+                  - generic [ref=e366]:
+                    - generic [ref=e367]: Release Notes - September 24th
+                    - generic [ref=e369]:
+                      - link "24/09/2026, 14:23" [ref=e370] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-24
+                      - link "Week view" [ref=e371] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-24
+                      - link "Month view" [ref=e374] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-24
+                  - list [ref=e379]:
+                    - listitem [ref=e380]: The email compose will now allow using tags even on single ad-hoc mail outs. That is when clicking an email address or selecting multiple contacts and then "Send Email" from the action menu.
+                    - listitem [ref=e381]:
+                      - text: You can now include
+                      - code [ref=e382]: unsubscribe block
+                      - text: in single emails which will generate a link allowing the contact to mark themselves as to "do not email".
+                    - listitem [ref=e383]: The email composer will alert you if you are attempting to email someone marked as "do not email".
+                    - listitem [ref=e384]: We fixed an issue with the calendar not respecting the selection of which record types to show.
+                - generic [ref=e385]:
+                  - generic [ref=e386]:
+                    - generic [ref=e387]: Release Notes - September 13th
+                    - generic [ref=e389]:
+                      - link "13/09/2026, 21:33" [ref=e390] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-13
+                      - link "Week view" [ref=e391] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-13
+                      - link "Month view" [ref=e394] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-13
+                  - paragraph [ref=e399]:
+                    - text: When you tick the "select all" checkbox at the top of each grid, you can now select to affect your actions on
+                    - strong [ref=e400]: all
+                    - text: your records.
+                - generic [ref=e401]:
+                  - generic [ref=e402]:
+                    - generic [ref=e403]: Release Notes - September 12th
+                    - generic [ref=e405]:
+                      - link "12/09/2026, 04:47" [ref=e406] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-12
+                      - link "Week view" [ref=e407] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-12
+                      - link "Month view" [ref=e410] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-12
+                  - list [ref=e415]:
+                    - listitem [ref=e416]:
+                      - text: "We've added a new field to all record types:"
+                      - emphasis [ref=e417]: Record Age
+                      - text: . This is an automatic field that shows the age of the record in days. You can use that field in filters, use those filters in campaigns to target contacts after they exist for a number of days, or even use it in automation workflows (Paid accounts only). You'll find the field in the column selector under Filters, if you want to show it in your grids, or in any filter construction.
+                    - listitem [ref=e418]:
+                      - text: Campaign schedules will now warn you if you attempt to schedule a content template that is missing the unsubscribe block (which you can add by pressing
+                      - emphasis [ref=e419]: "#"
+                      - text: when in the template editor, and selecting
+                      - emphasis [ref=e420]: Unsubscribe
+                      - text: from the tag selector.
+                - generic [ref=e421]:
+                  - generic [ref=e422]:
+                    - generic [ref=e423]: Release Notes - September 10th
+                    - generic [ref=e425]:
+                      - link "11/09/2026, 05:39" [ref=e426] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-11
+                      - link "Week view" [ref=e427] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-11
+                      - link "Month view" [ref=e430] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-11
+                  - list [ref=e435]:
+                    - listitem [ref=e436]:
+                      - text: We've added "Actual Close Date" field to deals, coupled with a dedicated close button on the toolbar (or you can tick the
+                      - code [ref=e437]: Closed
+                      - text: checkbox as before). This actual date will be used for sales targets and reports.
+                    - listitem [ref=e438]: Resolved an issue that prevented deals, cases and tasks from showing on the calendar even when date fields had the "Show in Calendar" ticked.
+                    - listitem [ref=e439]: Fixed the date on notes - now showing the years for older notes from previous years.
+                    - listitem [ref=e440]: Small fixes throughout (better validation notices when missing required fields, fixed some display issues)
+                - generic [ref=e441]:
+                  - generic [ref=e442]:
+                    - generic [ref=e443]: Release Notes - September 7th
+                    - generic [ref=e445]:
+                      - link "07/09/2026, 14:22" [ref=e446] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-07
+                      - link "Week view" [ref=e447] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-07
+                      - link "Month view" [ref=e450] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-07
+                  - generic [ref=e454]:
+                    - paragraph [ref=e455]:
+                      - emphasis [ref=e456]: "Tip:"
+                      - strong [ref=e457]: A single click on a grid row opens the quick view drawer. A double click takes you directly to the full record view page
+                    - list [ref=e458]:
+                      - listitem [ref=e459]: You can now select multiple contact or companies and email or SMS them all at once, using the action drop down. The actions show once records are ticked in the grid.
+                      - listitem [ref=e460]: Tasks will now hide completed tasks by default. You'll find a button in the Tasks page to quickly show or hide them.
+                      - listitem [ref=e461]: The Support widget on the new UI now works.
+                - generic [ref=e462]:
+                  - generic [ref=e463]:
+                    - generic [ref=e464]: Release Notes - September 1st
+                    - generic [ref=e466]:
+                      - link "01/09/2026, 16:00" [ref=e467] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-01
+                      - link "Week view" [ref=e468] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-01
+                      - link "Month view" [ref=e471] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-01
+                  - list [ref=e476]:
+                    - listitem [ref=e477]:
+                      - text: We've enabled our
+                      - strong [ref=e478]: Quickbooks
+                      - text: integration. If you are a user of Quickbooks you can now connect it to your FreeCRM account (Pro only).
+                    - listitem [ref=e479]: You can now determine that an unanswered incoming call will be routed to another phone number, or that calls within a certain time are directly routed to another phone (or to voicemail).
+                - generic [ref=e480]:
+                  - generic [ref=e481]:
+                    - generic [ref=e482]: Release Notes - August 31st
+                    - generic [ref=e484]:
+                      - link "01/09/2026, 06:01" [ref=e485] [cursor=pointer]:
+                        - /url: /calendar/day/2026-09-01
+                      - link "Week view" [ref=e486] [cursor=pointer]:
+                        - /url: /calendar/week/2026-09-01
+                      - link "Month view" [ref=e489] [cursor=pointer]:
+                        - /url: /calendar/month/2026-09-01
+                  - generic [ref=e493]:
+                    - paragraph [ref=e494]:
+                      - text: We've made our
+                      - strong [ref=e495]: new
+                      - text: user interface the default one for FreeCRM! We hope you like it. Please report any issues you encounter to us via the support link at the top right.
+                    - paragraph [ref=e496]:
+                      - text: If you feel that you must go back to the old you, you can do it via the profile menu (top right menu) - Select the
+                      - emphasis [ref=e497]: Back to the Old UI
+                      - text: option. Keep in mind the old UI will not be receiving any more updates and although we'll keep it going for now, it will fall behind very quickly.
+                - generic [ref=e498]:
+                  - generic [ref=e499]:
+                    - generic [ref=e500]: Release Notes - August 28th
+                    - generic [ref=e502]:
+                      - link "29/08/2026, 04:18" [ref=e503] [cursor=pointer]:
+                        - /url: /calendar/day/2026-08-29
+                      - link "Week view" [ref=e504] [cursor=pointer]:
+                        - /url: /calendar/week/2026-08-29
+                      - link "Month view" [ref=e507] [cursor=pointer]:
+                        - /url: /calendar/month/2026-08-29
+                  - generic [ref=e511]:
+                    - paragraph [ref=e512]:
+                      - text: The following are now available on the
+                      - strong [ref=e513]: new
+                      - text: user interface.
+                    - list [ref=e514]:
+                      - listitem [ref=e515]:
+                        - strong [ref=e516]: Video Conferencing
+                        - text: "- Pro accounts can now create configure the video conferencing system they use and have it auto create meeting links when prospects schedule a meeting with them using their public scheduling pages. We currently support Google Meet, Zoom, Microsoft Teams and Zoho Meetings."
+                      - listitem [ref=e517]:
+                        - text: When creating content templates you can now press
+                        - code [ref=e518]: "#"
+                        - text: and select to insert an unsubscribe block or include a link to one of your public scheduling calendars.
+                      - listitem [ref=e519]: If you are using the AI component, you can now have it suggest a call script when creating a call to a contact.
+                      - listitem [ref=e520]: You can now see latest form submissions on the home page.
+            - generic [ref=e522]:
+              - generic [ref=e523]:
+                - button "Drag to reorder" [ref=e524]
+                - generic [ref=e532]: Activity stream
+                - button "Reload card" [ref=e533] [cursor=pointer]
+                - button "Remove card" [ref=e539] [cursor=pointer]
+              - generic [ref=e544]:
+                - generic [ref=e545]:
+                  - generic [ref=e546]: Contacts
+                  - button "Change model type" [ref=e547] [cursor=pointer]
+                - generic [ref=e551]:
+                  - generic [ref=e556]:
+                    - generic [ref=e557]:
+                      - link "aish sghy" [ref=e558] [cursor=pointer]:
+                        - /url: /contacts/8f539b16-4407-42d7-b90c-5de086cb27ec
+                      - generic [ref=e560]:
+                        - link "29/11/2025, 16:27" [ref=e561] [cursor=pointer]:
+                          - /url: /calendar/day/2025-11-29
+                        - link "Week view" [ref=e562] [cursor=pointer]:
+                          - /url: /calendar/week/2025-11-29
+                        - link "Month view" [ref=e565] [cursor=pointer]:
+                          - /url: /calendar/month/2025-11-29
+                    - generic [ref=e568]: Updated
+                  - generic [ref=e574]:
+                    - generic [ref=e575]:
+                      - link "kanchan dar" [ref=e576] [cursor=pointer]:
+                        - /url: /contacts/5e75cebe-7468-4052-b64b-982aa480853e
+                      - generic [ref=e578]:
+                        - link "29/11/2025, 16:49" [ref=e579] [cursor=pointer]:
+                          - /url: /calendar/day/2025-11-29
+                        - link "Week view" [ref=e580] [cursor=pointer]:
+                          - /url: /calendar/week/2025-11-29
+                        - link "Month view" [ref=e583] [cursor=pointer]:
+                          - /url: /calendar/month/2025-11-29
+                    - generic [ref=e586]: Updated
+                  - generic [ref=e592]:
+                    - generic [ref=e593]:
+                      - link "kartiki pande" [ref=e594] [cursor=pointer]:
+                        - /url: /contacts/2aded32e-363e-43c0-a718-569c4991c3ac
+                      - generic [ref=e596]:
+                        - link "29/11/2025, 16:49" [ref=e597] [cursor=pointer]:
+                          - /url: /calendar/day/2025-11-29
+                        - link "Week view" [ref=e598] [cursor=pointer]:
+                          - /url: /calendar/week/2025-11-29
+                        - link "Month view" [ref=e601] [cursor=pointer]:
+                          - /url: /calendar/month/2025-11-29
+                    - generic [ref=e604]: Updated
+                  - generic [ref=e610]:
+                    - generic [ref=e611]:
+                      - link "aish sghy" [ref=e612] [cursor=pointer]:
+                        - /url: /contacts/d36ac7b0-497a-464c-a2b8-f1d5f1496948
+                      - generic [ref=e614]:
+                        - link "29/11/2025, 16:49" [ref=e615] [cursor=pointer]:
+                          - /url: /calendar/day/2025-11-29
+                        - link "Week view" [ref=e616] [cursor=pointer]:
+                          - /url: /calendar/week/2025-11-29
+                        - link "Month view" [ref=e619] [cursor=pointer]:
+                          - /url: /calendar/month/2025-11-29
+                    - generic [ref=e622]: Updated
+                  - generic [ref=e628]:
+                    - generic [ref=e629]:
+                      - link "Anjali Gurav" [ref=e630] [cursor=pointer]:
+                        - /url: /contacts/b33c15cb-aba6-45d4-bf4e-021e29d9ad07
+                      - generic [ref=e632]:
+                        - link "08/12/2024, 00:30" [ref=e633] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e634] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e637] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e640]: Updated
+                  - generic [ref=e646]:
+                    - generic [ref=e647]:
+                      - link "Anjali Gurav" [ref=e648] [cursor=pointer]:
+                        - /url: /contacts/e582d99c-d28f-4b0b-b4a2-011a800a3fc1
+                      - generic [ref=e650]:
+                        - link "08/12/2024, 19:00" [ref=e651] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e652] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e655] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e658]: Updated
+                  - generic [ref=e664]:
+                    - generic [ref=e665]:
+                      - link "Roohi patil" [ref=e666] [cursor=pointer]:
+                        - /url: /contacts/8a77ef36-b4c9-4212-b61f-7418ed199e6b
+                      - generic [ref=e668]:
+                        - link "08/12/2024, 19:01" [ref=e669] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e670] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e673] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e676]: Updated
+                  - generic [ref=e682]:
+                    - generic [ref=e683]:
+                      - link "Komal pujari" [ref=e684] [cursor=pointer]:
+                        - /url: /contacts/ac77e7cc-d61a-42cb-8f2f-24fe6fb51791
+                      - generic [ref=e686]:
+                        - link "08/12/2024, 19:01" [ref=e687] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e688] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e691] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e694]: Updated
+                  - generic [ref=e700]:
+                    - generic [ref=e701]:
+                      - link "suraj Patil" [ref=e702] [cursor=pointer]:
+                        - /url: /contacts/97c42e45-9a5a-46f8-a756-caa2c3a333df
+                      - generic [ref=e704]:
+                        - link "08/12/2024, 19:01" [ref=e705] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e706] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e709] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e712]: Updated
+                  - generic [ref=e718]:
+                    - generic [ref=e719]:
+                      - link "saee jadhav" [ref=e720] [cursor=pointer]:
+                        - /url: /contacts/9b3771c0-8254-4b86-a8d6-43a53f69eb95
+                      - generic [ref=e722]:
+                        - link "08/12/2024, 19:13" [ref=e723] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e724] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e727] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e730]: Updated
+                  - generic [ref=e736]:
+                    - generic [ref=e737]:
+                      - link "swati more" [ref=e738] [cursor=pointer]:
+                        - /url: /contacts/481c6d51-7e1d-442e-a9e2-a857248eb78e
+                      - generic [ref=e740]:
+                        - link "08/12/2024, 19:13" [ref=e741] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e742] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e745] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e748]: Updated
+                  - generic [ref=e754]:
+                    - generic [ref=e755]:
+                      - link "saee jadhav" [ref=e756] [cursor=pointer]:
+                        - /url: /contacts/92925a93-5dd3-4b36-8eaa-c804a5cd8aaf
+                      - generic [ref=e758]:
+                        - link "08/12/2024, 19:23" [ref=e759] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e760] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e763] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e766]: Updated
+                  - generic [ref=e772]:
+                    - generic [ref=e773]:
+                      - link "saee jadhav" [ref=e774] [cursor=pointer]:
+                        - /url: /contacts/23235342-ca9d-4082-90ed-4b4e34be1fa9
+                      - generic [ref=e776]:
+                        - link "08/12/2024, 19:27" [ref=e777] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e778] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e781] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e784]: Updated
+                  - generic [ref=e790]:
+                    - generic [ref=e791]:
+                      - link "saee jadhav" [ref=e792] [cursor=pointer]:
+                        - /url: /contacts/37b4d1cd-039e-4d09-8307-c19ab83add76
+                      - generic [ref=e794]:
+                        - link "08/12/2024, 19:31" [ref=e795] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e796] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e799] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e802]: Updated
+                  - generic [ref=e808]:
+                    - generic [ref=e809]:
+                      - link "saee jadhav" [ref=e810] [cursor=pointer]:
+                        - /url: /contacts/3cbf056c-93d1-467e-974b-1411ba30e942
+                      - generic [ref=e812]:
+                        - link "08/12/2024, 19:34" [ref=e813] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e814] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e817] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e820]: Updated
+                  - generic [ref=e826]:
+                    - generic [ref=e827]:
+                      - link "saee jadhav" [ref=e828] [cursor=pointer]:
+                        - /url: /contacts/b2bfde15-ec9a-4a0b-9a4c-44ca7105c215
+                      - generic [ref=e830]:
+                        - link "08/12/2024, 19:38" [ref=e831] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e832] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e835] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e838]: Updated
+                  - generic [ref=e844]:
+                    - generic [ref=e845]:
+                      - link "saee jadhav" [ref=e846] [cursor=pointer]:
+                        - /url: /contacts/cc29f069-dedd-4cae-bd7b-c77cc396b9c1
+                      - generic [ref=e848]:
+                        - link "08/12/2024, 19:42" [ref=e849] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e850] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e853] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e856]: Updated
+                  - generic [ref=e862]:
+                    - generic [ref=e863]:
+                      - link "saee jadhav" [ref=e864] [cursor=pointer]:
+                        - /url: /contacts/346e92b4-6fcb-4fad-8cfc-8a385d484b37
+                      - generic [ref=e866]:
+                        - link "08/12/2024, 19:44" [ref=e867] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e868] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e871] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e874]: Updated
+                  - generic [ref=e880]:
+                    - generic [ref=e881]:
+                      - link "saee jadhav" [ref=e882] [cursor=pointer]:
+                        - /url: /contacts/c350d995-631e-442b-a77a-1f55e84e49e2
+                      - generic [ref=e884]:
+                        - link "08/12/2024, 19:46" [ref=e885] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e886] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e889] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e892]: Updated
+                  - generic [ref=e898]:
+                    - generic [ref=e899]:
+                      - link "saee jadhav" [ref=e900] [cursor=pointer]:
+                        - /url: /contacts/8df9f3f8-837b-4b64-8873-96ef79b89ccc
+                      - generic [ref=e902]:
+                        - link "08/12/2024, 21:17" [ref=e903] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e904] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e907] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e910]: Updated
+                  - generic [ref=e916]:
+                    - generic [ref=e917]:
+                      - link "swati patil" [ref=e918] [cursor=pointer]:
+                        - /url: /contacts/6a41ca09-33a8-4ef6-b6d0-7be69d34f429
+                      - generic [ref=e920]:
+                        - link "08/12/2024, 21:17" [ref=e921] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e922] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e925] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e928]: Updated
+                  - generic [ref=e934]:
+                    - generic [ref=e935]:
+                      - link "saee jadhav" [ref=e936] [cursor=pointer]:
+                        - /url: /contacts/6f847570-d8bc-49b7-b13e-a5f5954fb4f9
+                      - generic [ref=e938]:
+                        - link "08/12/2024, 21:19" [ref=e939] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e940] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e943] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e946]: Updated
+                  - generic [ref=e952]:
+                    - generic [ref=e953]:
+                      - link "swati patil" [ref=e954] [cursor=pointer]:
+                        - /url: /contacts/f55031c9-baed-4c15-aa93-28622190b299
+                      - generic [ref=e956]:
+                        - link "08/12/2024, 21:19" [ref=e957] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e958] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e961] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e964]: Updated
+                  - generic [ref=e970]:
+                    - generic [ref=e971]:
+                      - link "saee jadhav" [ref=e972] [cursor=pointer]:
+                        - /url: /contacts/3af2880c-8d37-4d14-a335-1079728c8bfc
+                      - generic [ref=e974]:
+                        - link "08/12/2024, 21:25" [ref=e975] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e976] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e979] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e982]: Updated
+                  - generic [ref=e988]:
+                    - generic [ref=e989]:
+                      - link "swati patil" [ref=e990] [cursor=pointer]:
+                        - /url: /contacts/3112706b-6c02-417e-a64f-fcfc7d663b67
+                      - generic [ref=e992]:
+                        - link "08/12/2024, 21:25" [ref=e993] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e994] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e997] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e1000]: Updated
+                  - generic [ref=e1006]:
+                    - generic [ref=e1007]:
+                      - link "saee jadhav" [ref=e1008] [cursor=pointer]:
+                        - /url: /contacts/efca6dd5-d0e3-403c-8915-86d392d879be
+                      - generic [ref=e1010]:
+                        - link "08/12/2024, 21:30" [ref=e1011] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-08
+                        - link "Week view" [ref=e1012] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-08
+                        - link "Month view" [ref=e1015] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-08
+                    - generic [ref=e1018]: Updated
+                  - generic [ref=e1024]:
+                    - generic [ref=e1025]:
+                      - link "Amruta Patil" [ref=e1026] [cursor=pointer]:
+                        - /url: /contacts/a42e9d4a-dffe-458c-a435-4ab107b2e6e2
+                      - generic [ref=e1028]:
+                        - link "17/12/2024, 21:17" [ref=e1029] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1030] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1033] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1036]: Updated
+                  - generic [ref=e1042]:
+                    - generic [ref=e1043]:
+                      - link "Shweta abc Jadhav" [ref=e1044] [cursor=pointer]:
+                        - /url: /contacts/89860c8a-4515-4209-843a-0ed704b6a036
+                      - generic [ref=e1046]:
+                        - link "26/12/2024, 13:11" [ref=e1047] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-26
+                        - link "Week view" [ref=e1048] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-26
+                        - link "Month view" [ref=e1051] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-26
+                    - generic [ref=e1054]: Updated
+                  - generic [ref=e1060]:
+                    - generic [ref=e1061]:
+                      - link "Snehal abc patil" [ref=e1062] [cursor=pointer]:
+                        - /url: /contacts/0e7f4a39-f6b5-43be-8dde-a781b8d57090
+                      - generic [ref=e1064]:
+                        - link "26/12/2024, 13:11" [ref=e1065] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-26
+                        - link "Week view" [ref=e1066] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-26
+                        - link "Month view" [ref=e1069] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-26
+                    - generic [ref=e1072]: Updated
+                  - generic [ref=e1078]:
+                    - generic [ref=e1079]:
+                      - link "Akshay abc more" [ref=e1080] [cursor=pointer]:
+                        - /url: /contacts/93176e8e-d098-42bd-aee0-92ef64d01893
+                      - generic [ref=e1082]:
+                        - link "26/12/2024, 13:11" [ref=e1083] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-26
+                        - link "Week view" [ref=e1084] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-26
+                        - link "Month view" [ref=e1087] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-26
+                    - generic [ref=e1090]: Updated
+                  - generic [ref=e1096]:
+                    - generic [ref=e1097]:
+                      - link "chetan abc patil" [ref=e1098] [cursor=pointer]:
+                        - /url: /contacts/ec9129d8-8961-417c-9ff2-4bc21efa9eb5
+                      - generic [ref=e1100]:
+                        - link "26/12/2024, 13:11" [ref=e1101] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-26
+                        - link "Week view" [ref=e1102] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-26
+                        - link "Month view" [ref=e1105] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-26
+                    - generic [ref=e1108]: Updated
+                  - generic [ref=e1114]:
+                    - generic [ref=e1115]:
+                      - link "sanket abc jadhav" [ref=e1116] [cursor=pointer]:
+                        - /url: /contacts/0ddf3006-efe3-4c60-87d4-98b14806294b
+                      - generic [ref=e1118]:
+                        - link "26/12/2024, 13:11" [ref=e1119] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-26
+                        - link "Week view" [ref=e1120] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-26
+                        - link "Month view" [ref=e1123] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-26
+                    - generic [ref=e1126]: Updated
+                  - generic [ref=e1132]:
+                    - generic [ref=e1133]:
+                      - link "abcd pqr" [ref=e1134] [cursor=pointer]:
+                        - /url: /contacts/033c7026-c4ee-4653-9fd6-0baa7f4ede5f
+                      - generic [ref=e1136]:
+                        - link "27/12/2024, 11:50" [ref=e1137] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-27
+                        - link "Week view" [ref=e1138] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-27
+                        - link "Month view" [ref=e1141] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-27
+                    - generic [ref=e1144]: Updated
+                  - generic [ref=e1150]:
+                    - generic [ref=e1151]:
+                      - link "Rohit Naik" [ref=e1152] [cursor=pointer]:
+                        - /url: /contacts/7e4d38be-4140-44bb-aa5b-dd0618945e57
+                      - generic [ref=e1154]:
+                        - link "25/12/2024, 17:33" [ref=e1155] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-25
+                        - link "Week view" [ref=e1156] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-25
+                        - link "Month view" [ref=e1159] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-25
+                    - generic [ref=e1162]: Updated
+                  - generic [ref=e1168]:
+                    - generic [ref=e1169]:
+                      - link "Shruti Kale" [ref=e1170] [cursor=pointer]:
+                        - /url: /contacts/ddedef13-563f-48b1-80ef-a525196e7557
+                      - generic [ref=e1172]:
+                        - link "25/12/2024, 17:34" [ref=e1173] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-25
+                        - link "Week view" [ref=e1174] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-25
+                        - link "Month view" [ref=e1177] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-25
+                    - generic [ref=e1180]: Updated
+                  - generic [ref=e1186]:
+                    - generic [ref=e1187]:
+                      - link "Shweta abc Jadhav" [ref=e1188] [cursor=pointer]:
+                        - /url: /contacts/60d7ec53-96a2-499f-b4bf-7466a2cc6a20
+                      - generic [ref=e1190]:
+                        - link "27/12/2024, 12:16" [ref=e1191] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-27
+                        - link "Week view" [ref=e1192] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-27
+                        - link "Month view" [ref=e1195] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-27
+                    - generic [ref=e1198]: Updated
+                  - generic [ref=e1204]:
+                    - generic [ref=e1205]:
+                      - link "Snehal abc patil" [ref=e1206] [cursor=pointer]:
+                        - /url: /contacts/1f84ac29-7357-4ac0-a2a4-b028f01b0aaf
+                      - generic [ref=e1208]:
+                        - link "27/12/2024, 12:16" [ref=e1209] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-27
+                        - link "Week view" [ref=e1210] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-27
+                        - link "Month view" [ref=e1213] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-27
+                    - generic [ref=e1216]: Updated
+                  - generic [ref=e1222]:
+                    - generic [ref=e1223]:
+                      - link "Akshay abc more" [ref=e1224] [cursor=pointer]:
+                        - /url: /contacts/e9148dea-b096-4849-a5cf-548103a824ba
+                      - generic [ref=e1226]:
+                        - link "27/12/2024, 12:17" [ref=e1227] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-27
+                        - link "Week view" [ref=e1228] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-27
+                        - link "Month view" [ref=e1231] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-27
+                    - generic [ref=e1234]: Updated
+                  - generic [ref=e1240]:
+                    - generic [ref=e1241]:
+                      - link "chetan abc patil" [ref=e1242] [cursor=pointer]:
+                        - /url: /contacts/e7d5b8f5-ab9d-46d8-bce5-dec34b98b3c8
+                      - generic [ref=e1244]:
+                        - link "27/12/2024, 12:17" [ref=e1245] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-27
+                        - link "Week view" [ref=e1246] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-27
+                        - link "Month view" [ref=e1249] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-27
+                    - generic [ref=e1252]: Updated
+                  - generic [ref=e1258]:
+                    - generic [ref=e1259]:
+                      - link "sanket abc jadhav" [ref=e1260] [cursor=pointer]:
+                        - /url: /contacts/472814ce-6136-4b89-91cc-20d97f4f8998
+                      - generic [ref=e1262]:
+                        - link "27/12/2024, 12:17" [ref=e1263] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-27
+                        - link "Week view" [ref=e1264] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-27
+                        - link "Month view" [ref=e1267] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-27
+                    - generic [ref=e1270]: Updated
+                  - generic [ref=e1276]:
+                    - generic [ref=e1277]:
+                      - link "Snehal abc patil" [ref=e1278] [cursor=pointer]:
+                        - /url: /contacts/7241cd9a-3341-4028-bbec-d3124feba4b3
+                      - generic [ref=e1280]:
+                        - link "17/12/2024, 14:20" [ref=e1281] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1282] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1285] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1288]: Updated
+                  - generic [ref=e1294]:
+                    - generic [ref=e1295]:
+                      - link "Shweta abc Jadhav" [ref=e1296] [cursor=pointer]:
+                        - /url: /contacts/689a5766-420f-4592-9dbd-6eeb5d031d6b
+                      - generic [ref=e1298]:
+                        - link "17/12/2024, 14:27" [ref=e1299] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1300] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1303] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1306]: Updated
+                  - generic [ref=e1312]:
+                    - generic [ref=e1313]:
+                      - link "Snehal abc patil" [ref=e1314] [cursor=pointer]:
+                        - /url: /contacts/eec8674d-3ab8-4e2e-9705-d69f67b28876
+                      - generic [ref=e1316]:
+                        - link "17/12/2024, 14:28" [ref=e1317] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1318] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1321] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1324]: Updated
+                  - generic [ref=e1330]:
+                    - generic [ref=e1331]:
+                      - link "Akshay abc more" [ref=e1332] [cursor=pointer]:
+                        - /url: /contacts/a4aade51-fbff-4a0b-a1fb-30ad95f120a6
+                      - generic [ref=e1334]:
+                        - link "17/12/2024, 14:28" [ref=e1335] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1336] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1339] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1342]: Updated
+                  - generic [ref=e1348]:
+                    - generic [ref=e1349]:
+                      - link "chetan abc patil" [ref=e1350] [cursor=pointer]:
+                        - /url: /contacts/6ae8d17b-5566-47df-8585-80dbefcdc60d
+                      - generic [ref=e1352]:
+                        - link "17/12/2024, 14:28" [ref=e1353] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1354] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1357] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1360]: Updated
+                  - generic [ref=e1366]:
+                    - generic [ref=e1367]:
+                      - link "sanket abc jadhav" [ref=e1368] [cursor=pointer]:
+                        - /url: /contacts/e8d48eac-0933-4857-93c2-147be3156106
+                      - generic [ref=e1370]:
+                        - link "17/12/2024, 14:29" [ref=e1371] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1372] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1375] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1378]: Updated
+                  - generic [ref=e1384]:
+                    - generic [ref=e1385]:
+                      - link "ssg dhgd hrh" [ref=e1386] [cursor=pointer]:
+                        - /url: /contacts/3d4b062f-2ad3-49e3-a831-d3cdb9b2d72d
+                      - generic [ref=e1388]:
+                        - link "17/12/2024, 16:39" [ref=e1389] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1390] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1393] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1396]: Updated
+                  - generic [ref=e1402]:
+                    - generic [ref=e1403]:
+                      - link "Shweta abc Jadhav" [ref=e1404] [cursor=pointer]:
+                        - /url: /contacts/212ce0f9-a432-46f9-845a-9ec0bb87ca5b
+                      - generic [ref=e1406]:
+                        - link "17/12/2024, 17:10" [ref=e1407] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1408] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1411] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1414]: Updated
+                  - generic [ref=e1420]:
+                    - generic [ref=e1421]:
+                      - link "Snehal abc patil" [ref=e1422] [cursor=pointer]:
+                        - /url: /contacts/1d7c8e7a-4deb-4e92-afee-aa74d0a16f62
+                      - generic [ref=e1424]:
+                        - link "17/12/2024, 17:11" [ref=e1425] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1426] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1429] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1432]: Updated
+                  - generic [ref=e1438]:
+                    - generic [ref=e1439]:
+                      - link "Akshay abc more" [ref=e1440] [cursor=pointer]:
+                        - /url: /contacts/6b24ff04-c8a5-43c9-bf8d-2797900ef8c7
+                      - generic [ref=e1442]:
+                        - link "17/12/2024, 17:11" [ref=e1443] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1444] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1447] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1450]: Updated
+                  - generic [ref=e1456]:
+                    - generic [ref=e1457]:
+                      - link "chetan abc patil" [ref=e1458] [cursor=pointer]:
+                        - /url: /contacts/f0e89061-e7c2-471d-8af5-b0c4c7ba8551
+                      - generic [ref=e1460]:
+                        - link "17/12/2024, 17:11" [ref=e1461] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1462] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1465] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1468]: Updated
+                  - generic [ref=e1474]:
+                    - generic [ref=e1475]:
+                      - link "sanket abc jadhav" [ref=e1476] [cursor=pointer]:
+                        - /url: /contacts/47973203-3240-42f7-bb17-4bff3d230668
+                      - generic [ref=e1478]:
+                        - link "17/12/2024, 17:12" [ref=e1479] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1480] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1483] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1486]: Updated
+                  - generic [ref=e1492]:
+                    - generic [ref=e1493]:
+                      - link "Shweta abc Jadhav" [ref=e1494] [cursor=pointer]:
+                        - /url: /contacts/01ba90e5-9b90-4cf8-9f72-553fd0a46a68
+                      - generic [ref=e1496]:
+                        - link "17/12/2024, 17:19" [ref=e1497] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1498] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1501] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1504]: Updated
+                  - generic [ref=e1510]:
+                    - generic [ref=e1511]:
+                      - link "Snehal abc patil" [ref=e1512] [cursor=pointer]:
+                        - /url: /contacts/71d498b8-c3a6-486c-bb99-6d5041a08594
+                      - generic [ref=e1514]:
+                        - link "17/12/2024, 17:20" [ref=e1515] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1516] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1519] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1522]: Updated
+                  - generic [ref=e1528]:
+                    - generic [ref=e1529]:
+                      - link "Akshay abc more" [ref=e1530] [cursor=pointer]:
+                        - /url: /contacts/2804be53-7e61-4418-a720-d9143a588a6d
+                      - generic [ref=e1532]:
+                        - link "17/12/2024, 17:20" [ref=e1533] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1534] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1537] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1540]: Updated
+                  - generic [ref=e1546]:
+                    - generic [ref=e1547]:
+                      - link "chetan abc patil" [ref=e1548] [cursor=pointer]:
+                        - /url: /contacts/076bf7d3-36b5-4970-a4de-a4469610ed81
+                      - generic [ref=e1550]:
+                        - link "17/12/2024, 17:20" [ref=e1551] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1552] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1555] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1558]: Updated
+                  - generic [ref=e1564]:
+                    - generic [ref=e1565]:
+                      - link "sanket abc jadhav" [ref=e1566] [cursor=pointer]:
+                        - /url: /contacts/ac929e0a-b954-48aa-b28d-b65af7b71f38
+                      - generic [ref=e1568]:
+                        - link "17/12/2024, 17:20" [ref=e1569] [cursor=pointer]:
+                          - /url: /calendar/day/2024-12-17
+                        - link "Week view" [ref=e1570] [cursor=pointer]:
+                          - /url: /calendar/week/2024-12-17
+                        - link "Month view" [ref=e1573] [cursor=pointer]:
+                          - /url: /calendar/month/2024-12-17
+                    - generic [ref=e1576]: Updated
+                  - generic [ref=e1582]:
+                    - generic [ref=e1583]:
+                      - link "Anjali Patil" [ref=e1584] [cursor=pointer]:
+                        - /url: /contacts/2737b144-9634-405b-b51d-61c62f064c3d
+                      - generic [ref=e1586]:
+                        - link "08/01/2025, 00:11" [ref=e1587] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1588] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1591] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1594]: Updated
+                  - generic [ref=e1600]:
+                    - generic [ref=e1601]:
+                      - link "Abhishek Patel" [ref=e1602] [cursor=pointer]:
+                        - /url: /contacts/939ce41c-3009-4930-b6ff-1c77285fa042
+                      - generic [ref=e1604]:
+                        - link "08/01/2025, 00:11" [ref=e1605] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1606] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1609] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1612]: Updated
+                  - generic [ref=e1618]:
+                    - generic [ref=e1619]:
+                      - link "Amol Chemate" [ref=e1620] [cursor=pointer]:
+                        - /url: /contacts/44e258aa-0019-447b-b6c6-200ff8f3f573
+                      - generic [ref=e1622]:
+                        - link "08/01/2025, 00:11" [ref=e1623] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1624] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1627] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1630]: Updated
+                  - generic [ref=e1636]:
+                    - generic [ref=e1637]:
+                      - link "Amruta Patil" [ref=e1638] [cursor=pointer]:
+                        - /url: /contacts/f015a7e4-0f00-42e2-b432-deebf4d6d541
+                      - generic [ref=e1640]:
+                        - link "08/01/2025, 00:11" [ref=e1641] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1642] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1645] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1648]: Updated
+                  - generic [ref=e1654]:
+                    - generic [ref=e1655]:
+                      - link "Hemant Shah" [ref=e1656] [cursor=pointer]:
+                        - /url: /contacts/87e4f7c2-70b4-424a-869a-28b8d24f4330
+                      - generic [ref=e1658]:
+                        - link "08/01/2025, 00:12" [ref=e1659] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1660] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1663] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1666]: Updated
+                  - generic [ref=e1672]:
+                    - generic [ref=e1673]:
+                      - link "Jyoti Magar" [ref=e1674] [cursor=pointer]:
+                        - /url: /contacts/6ed1739d-bd5b-4f42-bda5-4dab685e82c6
+                      - generic [ref=e1676]:
+                        - link "08/01/2025, 00:12" [ref=e1677] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1678] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1681] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1684]: Updated
+                  - generic [ref=e1690]:
+                    - generic [ref=e1691]:
+                      - link "Kunal Gajare" [ref=e1692] [cursor=pointer]:
+                        - /url: /contacts/2905ffe8-593d-48ea-9ae9-ab6cdc88fb4f
+                      - generic [ref=e1694]:
+                        - link "08/01/2025, 00:12" [ref=e1695] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1696] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1699] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1702]: Updated
+                  - generic [ref=e1708]:
+                    - generic [ref=e1709]:
+                      - link "aaa aaaa" [ref=e1710] [cursor=pointer]:
+                        - /url: /contacts/8deadc3c-d584-4456-ae17-fa13a4170184
+                      - generic [ref=e1712]:
+                        - link "07/01/2025, 20:08" [ref=e1713] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1714] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1717] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1720]: Updated
+                  - generic [ref=e1726]:
+                    - generic [ref=e1727]:
+                      - link "a aa" [ref=e1728] [cursor=pointer]:
+                        - /url: /contacts/d731be85-c2cb-401a-bb5c-3ec00603b073
+                      - generic [ref=e1730]:
+                        - link "07/01/2025, 20:09" [ref=e1731] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1732] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1735] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1738]: Updated
+                  - generic [ref=e1744]:
+                    - generic [ref=e1745]:
+                      - link "Anjali Patil" [ref=e1746] [cursor=pointer]:
+                        - /url: /contacts/ee93b43f-4de9-4e17-b763-c576eee0b265
+                      - generic [ref=e1748]:
+                        - link "07/01/2025, 20:35" [ref=e1749] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1750] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1753] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1756]: Updated
+                  - generic [ref=e1762]:
+                    - generic [ref=e1763]:
+                      - link "Anjali Patil" [ref=e1764] [cursor=pointer]:
+                        - /url: /contacts/c9a68c7d-6003-40a2-bd9f-2a5b041a54a2
+                      - generic [ref=e1766]:
+                        - link "07/01/2025, 20:36" [ref=e1767] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1768] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1771] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1774]: Updated
+                  - generic [ref=e1780]:
+                    - generic [ref=e1781]:
+                      - link "Anjali Patil" [ref=e1782] [cursor=pointer]:
+                        - /url: /contacts/ea1c3550-f516-4637-beb7-8fa137a2961d
+                      - generic [ref=e1784]:
+                        - link "07/01/2025, 20:38" [ref=e1785] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1786] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1789] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1792]: Updated
+                  - generic [ref=e1798]:
+                    - generic [ref=e1799]:
+                      - link "Abhishek Patel" [ref=e1800] [cursor=pointer]:
+                        - /url: /contacts/9b39c843-80f4-4419-b5e8-7b57270a2723
+                      - generic [ref=e1802]:
+                        - link "07/01/2025, 20:38" [ref=e1803] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1804] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1807] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1810]: Updated
+                  - generic [ref=e1816]:
+                    - generic [ref=e1817]:
+                      - link "Amol Chemate" [ref=e1818] [cursor=pointer]:
+                        - /url: /contacts/0814eb09-c5a9-4af8-b64a-7f1e7126896a
+                      - generic [ref=e1820]:
+                        - link "07/01/2025, 20:38" [ref=e1821] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1822] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1825] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1828]: Updated
+                  - generic [ref=e1834]:
+                    - generic [ref=e1835]:
+                      - link "Amruta Patil" [ref=e1836] [cursor=pointer]:
+                        - /url: /contacts/0acd4634-062e-47af-aa2d-061cc0f85668
+                      - generic [ref=e1838]:
+                        - link "07/01/2025, 20:38" [ref=e1839] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1840] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1843] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1846]: Updated
+                  - generic [ref=e1852]:
+                    - generic [ref=e1853]:
+                      - link "Hemant Shah" [ref=e1854] [cursor=pointer]:
+                        - /url: /contacts/5051a6ff-2691-4452-992e-6e3b392252f8
+                      - generic [ref=e1856]:
+                        - link "07/01/2025, 20:39" [ref=e1857] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1858] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1861] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1864]: Updated
+                  - generic [ref=e1870]:
+                    - generic [ref=e1871]:
+                      - link "Jyoti Magar" [ref=e1872] [cursor=pointer]:
+                        - /url: /contacts/a58b0d92-d853-4a4a-b897-54623fe82ce5
+                      - generic [ref=e1874]:
+                        - link "07/01/2025, 20:39" [ref=e1875] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1876] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1879] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1882]: Updated
+                  - generic [ref=e1888]:
+                    - generic [ref=e1889]:
+                      - link "Kunal Gajare" [ref=e1890] [cursor=pointer]:
+                        - /url: /contacts/1df067cf-1d14-4c1e-a183-f6dd70887a92
+                      - generic [ref=e1892]:
+                        - link "07/01/2025, 20:39" [ref=e1893] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1894] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1897] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1900]: Updated
+                  - generic [ref=e1906]:
+                    - generic [ref=e1907]:
+                      - link "Anjali Patil" [ref=e1908] [cursor=pointer]:
+                        - /url: /contacts/e6ab0c58-2e86-493d-8f2a-ca6594661f65
+                      - generic [ref=e1910]:
+                        - link "07/01/2025, 20:49" [ref=e1911] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1912] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1915] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1918]: Updated
+                  - generic [ref=e1924]:
+                    - generic [ref=e1925]:
+                      - link "Abhishek Patel" [ref=e1926] [cursor=pointer]:
+                        - /url: /contacts/86de1509-00a6-41c8-87cb-5979ad20e3f6
+                      - generic [ref=e1928]:
+                        - link "07/01/2025, 20:49" [ref=e1929] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1930] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1933] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1936]: Updated
+                  - generic [ref=e1942]:
+                    - generic [ref=e1943]:
+                      - link "Anjali Patil" [ref=e1944] [cursor=pointer]:
+                        - /url: /contacts/08ee5a4c-34b7-4a7e-a1bf-b898ded67215
+                      - generic [ref=e1946]:
+                        - link "08/01/2025, 12:04" [ref=e1947] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1948] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1951] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1954]: Updated
+                  - generic [ref=e1960]:
+                    - generic [ref=e1961]:
+                      - link "Amol Chemate" [ref=e1962] [cursor=pointer]:
+                        - /url: /contacts/5999bbbc-d714-470b-9128-fdaf660749a0
+                      - generic [ref=e1964]:
+                        - link "07/01/2025, 20:49" [ref=e1965] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e1966] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e1969] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e1972]: Updated
+                  - generic [ref=e1978]:
+                    - generic [ref=e1979]:
+                      - link "Abhishek Patel" [ref=e1980] [cursor=pointer]:
+                        - /url: /contacts/6ced1394-2537-47e2-a4d7-7d73009f5505
+                      - generic [ref=e1982]:
+                        - link "08/01/2025, 12:04" [ref=e1983] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e1984] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e1987] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e1990]: Updated
+                  - generic [ref=e1996]:
+                    - generic [ref=e1997]:
+                      - link "Amruta Patil" [ref=e1998] [cursor=pointer]:
+                        - /url: /contacts/8ee55a71-dce8-4ab6-b542-886459e12c29
+                      - generic [ref=e2000]:
+                        - link "07/01/2025, 20:49" [ref=e2001] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2002] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2005] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2008]: Updated
+                  - generic [ref=e2014]:
+                    - generic [ref=e2015]:
+                      - link "Amol Chemate" [ref=e2016] [cursor=pointer]:
+                        - /url: /contacts/d6db9bd2-08cb-46d6-ab83-bdb3cd0fe5b5
+                      - generic [ref=e2018]:
+                        - link "08/01/2025, 12:04" [ref=e2019] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e2020] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e2023] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e2026]: Updated
+                  - generic [ref=e2032]:
+                    - generic [ref=e2033]:
+                      - link "Hemant Shah" [ref=e2034] [cursor=pointer]:
+                        - /url: /contacts/d904fe28-ebd1-4e88-840c-8e2a2d8dc9a7
+                      - generic [ref=e2036]:
+                        - link "07/01/2025, 20:49" [ref=e2037] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2038] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2041] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2044]: Updated
+                  - generic [ref=e2050]:
+                    - generic [ref=e2051]:
+                      - link "Amruta Patil" [ref=e2052] [cursor=pointer]:
+                        - /url: /contacts/940cd5bd-6134-46ae-a213-62073cfd48c2
+                      - generic [ref=e2054]:
+                        - link "08/01/2025, 12:04" [ref=e2055] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e2056] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e2059] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e2062]: Updated
+                  - generic [ref=e2068]:
+                    - generic [ref=e2069]:
+                      - link "Jyoti Magar" [ref=e2070] [cursor=pointer]:
+                        - /url: /contacts/715af5e1-fe69-4984-95f4-0cb098f5322c
+                      - generic [ref=e2072]:
+                        - link "07/01/2025, 20:49" [ref=e2073] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2074] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2077] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2080]: Updated
+                  - generic [ref=e2086]:
+                    - generic [ref=e2087]:
+                      - link "Hemant Shah" [ref=e2088] [cursor=pointer]:
+                        - /url: /contacts/9d2e74f2-29b0-4a38-ad04-be58e1146edc
+                      - generic [ref=e2090]:
+                        - link "08/01/2025, 12:04" [ref=e2091] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e2092] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e2095] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e2098]: Updated
+                  - generic [ref=e2104]:
+                    - generic [ref=e2105]:
+                      - link "Kunal Gajare" [ref=e2106] [cursor=pointer]:
+                        - /url: /contacts/29dc640c-7fdb-45fa-b96e-40aa6777b2de
+                      - generic [ref=e2108]:
+                        - link "07/01/2025, 20:50" [ref=e2109] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2110] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2113] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2116]: Updated
+                  - generic [ref=e2122]:
+                    - generic [ref=e2123]:
+                      - link "Jyoti Magar" [ref=e2124] [cursor=pointer]:
+                        - /url: /contacts/d99d3a67-7a2f-4511-93e3-c957708efd13
+                      - generic [ref=e2126]:
+                        - link "08/01/2025, 12:05" [ref=e2127] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e2128] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e2131] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e2134]: Updated
+                  - generic [ref=e2140]:
+                    - generic [ref=e2141]:
+                      - link "Anjali Patil" [ref=e2142] [cursor=pointer]:
+                        - /url: /contacts/bcef6f42-1c76-477b-beb2-f9ea47d7f107
+                      - generic [ref=e2144]:
+                        - link "07/01/2025, 20:53" [ref=e2145] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2146] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2149] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2152]: Updated
+                  - generic [ref=e2158]:
+                    - generic [ref=e2159]:
+                      - link "Kunal Gajare" [ref=e2160] [cursor=pointer]:
+                        - /url: /contacts/4d33d867-0924-4be8-9345-f04b0986cad6
+                      - generic [ref=e2162]:
+                        - link "08/01/2025, 12:05" [ref=e2163] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-08
+                        - link "Week view" [ref=e2164] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-08
+                        - link "Month view" [ref=e2167] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-08
+                    - generic [ref=e2170]: Updated
+                  - generic [ref=e2176]:
+                    - generic [ref=e2177]:
+                      - link "Abhishek Patel" [ref=e2178] [cursor=pointer]:
+                        - /url: /contacts/7c6ea935-6bff-4459-89d2-6a2a1b69cfca
+                      - generic [ref=e2180]:
+                        - link "07/01/2025, 20:54" [ref=e2181] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2182] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2185] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2188]: Updated
+                  - generic [ref=e2194]:
+                    - generic [ref=e2195]:
+                      - link "Amol Chemate" [ref=e2196] [cursor=pointer]:
+                        - /url: /contacts/fc1c210a-03eb-4f1b-83dd-f3ab488e2191
+                      - generic [ref=e2198]:
+                        - link "07/01/2025, 20:54" [ref=e2199] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2200] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2203] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2206]: Updated
+                  - generic [ref=e2212]:
+                    - generic [ref=e2213]:
+                      - link "Amruta Patil" [ref=e2214] [cursor=pointer]:
+                        - /url: /contacts/4235931e-6578-4117-b3f7-f9f386f24377
+                      - generic [ref=e2216]:
+                        - link "07/01/2025, 20:54" [ref=e2217] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2218] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2221] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2224]: Updated
+                  - generic [ref=e2230]:
+                    - generic [ref=e2231]:
+                      - link "Hemant Shah" [ref=e2232] [cursor=pointer]:
+                        - /url: /contacts/0dd4bbd5-0361-41f9-8257-fca1b300b0ef
+                      - generic [ref=e2234]:
+                        - link "07/01/2025, 20:54" [ref=e2235] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2236] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2239] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2242]: Updated
+                  - generic [ref=e2248]:
+                    - generic [ref=e2249]:
+                      - link "Jyoti Magar" [ref=e2250] [cursor=pointer]:
+                        - /url: /contacts/f46b2848-8edc-46a6-a97d-2ee955489595
+                      - generic [ref=e2252]:
+                        - link "07/01/2025, 20:54" [ref=e2253] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2254] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2257] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2260]: Updated
+                  - generic [ref=e2266]:
+                    - generic [ref=e2267]:
+                      - link "Kunal Gajare" [ref=e2268] [cursor=pointer]:
+                        - /url: /contacts/c809da98-1ba3-499d-a506-7204e945da41
+                      - generic [ref=e2270]:
+                        - link "07/01/2025, 20:54" [ref=e2271] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2272] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2275] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2278]: Updated
+                  - generic [ref=e2284]:
+                    - generic [ref=e2285]:
+                      - link "Anjali Patil" [ref=e2286] [cursor=pointer]:
+                        - /url: /contacts/420f59a4-14f5-47f8-8505-8b4516fa1395
+                      - generic [ref=e2288]:
+                        - link "07/01/2025, 20:59" [ref=e2289] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2290] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2293] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2296]: Updated
+                  - generic [ref=e2302]:
+                    - generic [ref=e2303]:
+                      - link "Abhishek Patel" [ref=e2304] [cursor=pointer]:
+                        - /url: /contacts/baee0d0d-e704-4bd6-be55-455019cba7e8
+                      - generic [ref=e2306]:
+                        - link "07/01/2025, 20:59" [ref=e2307] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2308] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2311] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2314]: Updated
+                  - generic [ref=e2320]:
+                    - generic [ref=e2321]:
+                      - link "Amol Chemate" [ref=e2322] [cursor=pointer]:
+                        - /url: /contacts/f856b8a2-034e-4700-b6a5-96689113ed2c
+                      - generic [ref=e2324]:
+                        - link "07/01/2025, 20:59" [ref=e2325] [cursor=pointer]:
+                          - /url: /calendar/day/2025-01-07
+                        - link "Week view" [ref=e2326] [cursor=pointer]:
+                          - /url: /calendar/week/2025-01-07
+                        - link "Month view" [ref=e2329] [cursor=pointer]:
+                          - /url: /calendar/month/2025-01-07
+                    - generic [ref=e2332]: Updated
+                  - generic [ref=e2337]:
+                    - generic [ref=e2338]:
+                      - link "kartiki pande" [ref=e2339] [cursor=pointer]:
+                        - /url: /contacts/dfa48332-4c4b-4242-9d14-f5a17bb5981d
+                      - generic [ref=e2341]:
+                        - link "29/11/2025, 16:27" [ref=e2342] [cursor=pointer]:
+                          - /url: /calendar/day/2025-11-29
+                        - link "Week view" [ref=e2343] [cursor=pointer]:
+                          - /url: /calendar/week/2025-11-29
+                        - link "Month view" [ref=e2346] [cursor=pointer]:
+                          - /url: /calendar/month/2025-11-29
+                    - generic [ref=e2349]: Updated
+            - generic [ref=e2352]:
+              - generic [ref=e2353]:
+                - button "Drag to reorder" [ref=e2354]
+                - generic [ref=e2362]: Call queue
+                - button "Reload card" [ref=e2363] [cursor=pointer]
+                - button "Remove card" [ref=e2369] [cursor=pointer]
+              - generic [ref=e2374]:
+                - link "Open call queue" [ref=e2376] [cursor=pointer]:
+                  - /url: /calls/queue
+                - paragraph [ref=e2378]: Call queue is empty.
+            - generic [ref=e2380]:
+              - generic [ref=e2381]:
+                - button "Drag to reorder" [ref=e2382]
+                - generic [ref=e2390]: Deal pipeline
+                - button "Reload card" [ref=e2391] [cursor=pointer]
+                - button "Remove card" [ref=e2397] [cursor=pointer]
+              - generic [ref=e2402]:
+                - generic [ref=e2403]:
+                  - generic [ref=e2404]: Deals by stage
+                  - link "View all" [ref=e2405] [cursor=pointer]:
+                    - /url: /deals
+                - generic [ref=e2406]:
+                  - generic [ref=e2407]:
+                    - generic "Unknown" [ref=e2408]
+                    - generic [ref=e2411]:
+                      - generic [ref=e2412]: "177"
+                      - generic [ref=e2413]: $18K
+                  - generic [ref=e2414]:
+                    - generic "Won" [ref=e2415]
+                    - generic [ref=e2418]: "22"
+                  - generic [ref=e2420]:
+                    - generic "Negotiate" [ref=e2421]
+                    - generic [ref=e2424]: "1"
+            - generic [ref=e2427]:
+              - generic [ref=e2428]:
+                - button "Drag to reorder" [ref=e2429]
+                - generic [ref=e2437]: SMS messages
+                - button "Reload card" [ref=e2438] [cursor=pointer]
+                - button "Remove card" [ref=e2444] [cursor=pointer]
+              - generic [ref=e2449]:
+                - link "Open messages" [ref=e2451] [cursor=pointer]:
+                  - /url: /messages
+                - paragraph [ref=e2453]: No incoming SMS messages.
+            - generic [ref=e2455]:
+              - generic [ref=e2456]:
+                - button "Drag to reorder" [ref=e2457]
+                - generic [ref=e2465]: WhatsApp messages
+                - button "Reload card" [ref=e2466] [cursor=pointer]
+                - button "Remove card" [ref=e2472] [cursor=pointer]
+              - generic [ref=e2477]:
+                - link "Open messages" [ref=e2479] [cursor=pointer]:
+                  - /url: /messages
+                - paragraph [ref=e2481]: No WhatsApp messages.
+            - generic [ref=e2483]:
+              - generic [ref=e2484]:
+                - button "Drag to reorder" [ref=e2485]
+                - generic [ref=e2493]: Upcoming calls
+                - button "Reload card" [ref=e2494] [cursor=pointer]
+                - button "Remove card" [ref=e2500] [cursor=pointer]
+              - generic [ref=e2505]:
+                - link "View all" [ref=e2507] [cursor=pointer]:
+                  - /url: /calls
+                - paragraph [ref=e2509]: No upcoming calls scheduled.
+            - generic [ref=e2511]:
+              - generic [ref=e2512]:
+                - button "Drag to reorder" [ref=e2513]
+                - generic [ref=e2521]: Open tasks
+                - button "Reload card" [ref=e2522] [cursor=pointer]
+                - button "Remove card" [ref=e2528] [cursor=pointer]
+              - generic [ref=e2533]:
+                - link "View all" [ref=e2535] [cursor=pointer]:
+                  - /url: /tasks
+                - generic [ref=e2536]:
+                  - generic [ref=e2539] [cursor=pointer]:
+                    - generic [ref=e2540]: avc
+                    - generic [ref=e2541]: 1305d overdue
+                  - generic [ref=e2544] [cursor=pointer]:
+                    - generic [ref=e2545]: DemoTitle
+                    - generic [ref=e2546]: 264d overdue
+                  - generic [ref=e2549] [cursor=pointer]:
+                    - generic [ref=e2550]: DemoTitle
+                    - generic [ref=e2551]: 235d overdue
+                  - generic [ref=e2554] [cursor=pointer]:
+                    - generic [ref=e2555]: dsad
+                    - generic [ref=e2556]: 200d overdue
+                  - generic [ref=e2559] [cursor=pointer]:
+                    - generic [ref=e2560]: DemoTitle
+                    - generic [ref=e2561]: 118d overdue
+                  - generic [ref=e2564] [cursor=pointer]:
+                    - generic [ref=e2565]: DemoTitle
+                    - generic [ref=e2566]: 118d overdue
+                  - generic [ref=e2569] [cursor=pointer]:
+                    - generic [ref=e2570]: DemoTitle
+                    - generic [ref=e2571]: 118d overdue
+                  - generic [ref=e2574] [cursor=pointer]:
+                    - generic [ref=e2575]: DemoTitle
+                    - generic [ref=e2576]: 118d overdue
+            - generic [ref=e2578]:
+              - generic [ref=e2579]:
+                - button "Drag to reorder" [ref=e2580]
+                - generic [ref=e2588]: Today's schedule
+                - button "Reload card" [ref=e2589] [cursor=pointer]
+                - button "Remove card" [ref=e2595] [cursor=pointer]
+              - generic [ref=e2600]:
+                - generic [ref=e2601]:
+                  - generic [ref=e2602]: Wednesday 21 October
+                  - link "Open calendar" [ref=e2605] [cursor=pointer]:
+                    - /url: /calendar
+                - paragraph [ref=e2607]: No events scheduled today.
+            - generic [ref=e2609]:
+              - generic [ref=e2610]:
+                - button "Drag to reorder" [ref=e2611]
+                - generic [ref=e2619]: Recent contacts
+                - button "Reload card" [ref=e2620] [cursor=pointer]
+                - button "Remove card" [ref=e2626] [cursor=pointer]
+              - generic [ref=e2631]:
+                - link "View all" [ref=e2633] [cursor=pointer]:
+                  - /url: /contacts
+                - generic [ref=e2634]:
+                  - generic [ref=e2635] [cursor=pointer]:
+                    - generic [ref=e2636]: AY
+                    - generic [ref=e2637]: Aboli yadav
+                    - generic [ref=e2639]: Today
+                  - generic [ref=e2640] [cursor=pointer]:
+                    - generic [ref=e2641]: AY
+                    - generic [ref=e2642]: Aboli yadav
+                    - generic [ref=e2644]: Today
+                  - generic [ref=e2645] [cursor=pointer]:
+                    - generic [ref=e2646]: AY
+                    - generic [ref=e2647]: Aboli yadav
+                    - generic [ref=e2649]: Today
+                  - generic [ref=e2650] [cursor=pointer]:
+                    - generic [ref=e2651]: AK
+                    - generic [ref=e2652]: Anuja Khemkar
+                    - generic [ref=e2654]: Today
+                  - generic [ref=e2655] [cursor=pointer]:
+                    - generic [ref=e2656]: AK
+                    - generic [ref=e2657]: Anuja Khemkar
+                    - generic [ref=e2659]: Today
+                  - generic [ref=e2660] [cursor=pointer]:
+                    - generic [ref=e2661]: AK
+                    - generic [ref=e2662]: Anuja Khemkar
+                    - generic [ref=e2664]: Today
+                  - generic [ref=e2665] [cursor=pointer]:
+                    - generic [ref=e2666]: AK
+                    - generic [ref=e2667]: Anuja Khemkar
+                    - generic [ref=e2669]: Today
+                  - generic [ref=e2670] [cursor=pointer]:
+                    - generic [ref=e2671]: AK
+                    - generic [ref=e2672]: Anuja Khemkar
+                    - generic [ref=e2674]: Today
+            - generic [ref=e2676]:
+              - generic [ref=e2677]:
+                - button "Drag to reorder" [ref=e2678]
+                - generic [ref=e2686]: Recent deals
+                - button "Reload card" [ref=e2687] [cursor=pointer]
+                - button "Remove card" [ref=e2693] [cursor=pointer]
+              - generic [ref=e2698]:
+                - link "View all" [ref=e2700] [cursor=pointer]:
+                  - /url: /deals
+                - generic [ref=e2701]:
+                  - generic [ref=e2702] [cursor=pointer]: Books Deals
+                  - generic [ref=e2709] [cursor=pointer]: Iphone 18 Duo
+                  - generic [ref=e2716] [cursor=pointer]: Iphone 18 Duo
+                  - generic [ref=e2723] [cursor=pointer]: Iphone 18 Duo
+                  - generic [ref=e2730] [cursor=pointer]: Automation Deals
+                  - generic [ref=e2737] [cursor=pointer]: Anylyst
+                  - generic [ref=e2744] [cursor=pointer]: Automation Deals
+                  - generic [ref=e2751] [cursor=pointer]: Automation Deals
+            - generic [ref=e2759]:
+              - generic [ref=e2760]:
+                - button "Drag to reorder" [ref=e2761]
+                - generic [ref=e2769]: Recent companies
+                - button "Reload card" [ref=e2770] [cursor=pointer]
+                - button "Remove card" [ref=e2776] [cursor=pointer]
+              - generic [ref=e2781]:
+                - link "View all" [ref=e2783] [cursor=pointer]:
+                  - /url: /companies
+                - generic [ref=e2784]:
+                  - generic [ref=e2785] [cursor=pointer]:
+                    - generic [ref=e2786]: TS
+                    - generic [ref=e2787]: Tech System
+                    - generic [ref=e2789]: 4 Sept
+                  - generic [ref=e2790] [cursor=pointer]:
+                    - generic [ref=e2791]: TS
+                    - generic [ref=e2792]: Tech System
+                    - generic [ref=e2794]: 4 Sept
+                  - generic [ref=e2795] [cursor=pointer]:
+                    - generic [ref=e2796]: TS
+                    - generic [ref=e2797]: Tech System
+                    - generic [ref=e2799]: 4 Sept
+                  - generic [ref=e2800] [cursor=pointer]:
+                    - generic [ref=e2801]: TS
+                    - generic [ref=e2802]: Tech System
+                    - generic [ref=e2804]: 29 Aug
+                  - generic [ref=e2805] [cursor=pointer]:
+                    - generic [ref=e2806]: TS
+                    - generic [ref=e2807]: Tech System
+                    - generic [ref=e2809]: 29 Aug
+                  - generic [ref=e2810] [cursor=pointer]:
+                    - generic [ref=e2811]: TS
+                    - generic [ref=e2812]: Tech System
+                    - generic [ref=e2814]: 29 Aug
+                  - generic [ref=e2815] [cursor=pointer]:
+                    - generic [ref=e2816]: TS
+                    - generic [ref=e2817]: Tech System
+                    - generic [ref=e2819]: 29 Aug
+                  - generic [ref=e2820] [cursor=pointer]:
+                    - generic [ref=e2821]: TS
+                    - generic [ref=e2822]: Tech System
+                    - generic [ref=e2824]: 25 Aug
+            - generic [ref=e2826]:
+              - generic [ref=e2827]:
+                - button "Drag to reorder" [ref=e2828]
+                - generic [ref=e2836]: Form submissions
+                - button "Reload card" [ref=e2837] [cursor=pointer]
+                - button "Remove card" [ref=e2843] [cursor=pointer]
+              - generic [ref=e2848]:
+                - link "View all" [ref=e2850] [cursor=pointer]:
+                  - /url: /forms
+                - paragraph [ref=e2852]: No form submissions yet.
+            - generic [ref=e2854]:
+              - generic [ref=e2855]:
+                - button "Drag to reorder" [ref=e2856]
+                - generic [ref=e2864]: Deal summary
+                - button "Reload card" [ref=e2865] [cursor=pointer]
+                - button "Remove card" [ref=e2871] [cursor=pointer]
+              - link "View deals" [ref=e2878] [cursor=pointer]:
+                - /url: /deals
+            - generic [ref=e2885]:
+              - generic [ref=e2886]:
+                - button "Drag to reorder" [ref=e2887]
+                - generic [ref=e2895]: Sales targets
+                - button "Reload card" [ref=e2896] [cursor=pointer]
+                - button "Remove card" [ref=e2902] [cursor=pointer]
+              - generic [ref=e2907]:
+                - link "View all" [ref=e2909] [cursor=pointer]:
+                  - /url: /deals/targets
+                - paragraph [ref=e2911]: No records found
+            - generic [ref=e2913]:
+              - generic [ref=e2914]:
+                - button "Drag to reorder" [ref=e2915]
+                - generic [ref=e2923]: Recent calls
+                - button "Reload card" [ref=e2924] [cursor=pointer]
+                - button "Remove card" [ref=e2930] [cursor=pointer]
+              - generic [ref=e2935]:
+                - link "View all" [ref=e2937] [cursor=pointer]:
+                  - /url: /calls
+                - paragraph [ref=e2939]: No calls recorded yet.
+          - status [ref=e2940]
+```
+
+# Test source
+
+```ts
+  1  | 
+  2  | export default class BasePage {
+  3  |     constructor(page) {
+  4  |         this.page = page;
+  5  |     }
+  6  | 
+  7  |     async click(locator) {
+> 8  |         await locator.click();
+     |                       ^ Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'Contacts' }) resolved to 2 elements:
+  9  |     }
+  10 | 
+  11 |     async doubleClick(locator) {
+  12 |         await locator.dblclick();
+  13 |     }
+  14 | 
+  15 |     async rightClick(locator) {
+  16 |         await locator.click({ button: 'right' });
+  17 |     }
+  18 | 
+  19 |     async fill(locator, value) {
+  20 |         await locator.fill(value);
+  21 |     }
+  22 | 
+  23 |     async clear(locator) {
+  24 |         await locator.clear();
+  25 |     }
+  26 | 
+  27 |     async title() {
+  28 |         return await this.page.title();
+  29 |     }
+  30 | 
+  31 |     async url() {
+  32 |         return this.page.url();
+  33 |     }
+  34 | 
+  35 |     async textContent(locator) {
+  36 |         return await locator.textContent();
+  37 |     }
+  38 | }
+  39 | 
+```

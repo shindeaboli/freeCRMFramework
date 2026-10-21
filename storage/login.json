@@ -1,0 +1,77 @@
+{
+  "cookies": [
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1792575144487,\"i_b\":\"mVMeXlB+xZ5in5gOGzJ/Hdcknwp1uELY9yJC314slRs\",\"i_e\":{\"enable_itp_optimization\":24},\"i_et\":1792575144487}",
+      "domain": "ui.freecrm.com",
+      "path": "/",
+      "expires": 1808127144,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "_rKjwIaeBZO92L2QCsNXn1QuoEnBS1O2.CKd7.rrjRQ-1792575147.095426-1.0.1.1-Ded5y2QgcAszItq6aGAPRK6957Xd9uxX1w8GKoWrReQRlVMoR1J5YTzFGjryNt6ywRMkuhJg3KXozDGMKRaT97VF4o_vwozTNxW7kG6EabMD0dmY65Wwcbzq2WgUM4d1",
+      "domain": ".onesignal.com",
+      "path": "/",
+      "expires": 1792576946.819808,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NID",
+      "value": "CuUBCAESlwEBOxGDSNRCebT1f14ytvGt3UA9Cz7k_UvzSVmDcfTApa4AEVmvqLk9rTmTd5-CkojuT8wHmGCVHQGwtcQQR7v0G16H_F2M0VRDRTjes0pMbRKUp2srbsyCNZ7mDN1sfD8TIai9I3BnmD34hepLT5Dbm9UbqiZsjmqitqajzOivuV0rlmoX3Ru70XZeGE85l1d9zUFPCWssKAEyRQHSrAfP8NRHOK1XluUFThAs0sPmX12bM1Q5In2i9p9aXbAyfNUUAF-xsogQe0M5BZzEWXD_m65jXaELiP9LkUOfqEHDCA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1808386346.885522,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://ui.freecrm.com",
+      "localStorage": [
+        {
+          "name": "ZD-suid",
+          "value": "{\"id\":\"7583028071ce4510b8cabcc7646e821a\",\"expiry\":1792576047384,\"tabs\":{\"count\":1,\"expiry\":0}}"
+        },
+        {
+          "name": "fc_ui_theme",
+          "value": "default"
+        },
+        {
+          "name": "os_pageViews",
+          "value": "1"
+        },
+        {
+          "name": "userConsent",
+          "value": "false"
+        },
+        {
+          "name": "ZD-buid",
+          "value": "933b0cfc899a44d796ec97e09c6b1608"
+        },
+        {
+          "name": "auth_token",
+          "value": "63a58db670798eeec95f394c5b01cc8248700470"
+        },
+        {
+          "name": "650e1060345743d961bcbae6.clientId",
+          "value": "933b0cfc899a44d796ec97e09c6b1608"
+        },
+        {
+          "name": "fc_dark_mode",
+          "value": "false"
+        },
+        {
+          "name": "version",
+          "value": "1.1.50"
+        }
+      ]
+    }
+  ]
+}
